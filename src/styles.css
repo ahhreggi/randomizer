@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* Font Family */
+html, body {
+    height: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(240, 240, 240);
+    background-color: rgb(15, 15, 15);
+}
+
+.test {
+    background-color: indigo;
+}
+
+.btn-random-full {
+    width: 100%;
+}
+
+.btn-random-half {
+    width: 50%;
+}
+
+.btn-random-third {
+    width: 30%;
+}
+
+.btn-random-fifth {
+    width: 20%;
+}
+
+.hr-random {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.toggle-random {
+    border: 1px solid white;
+    border-radius: 10px;
+}

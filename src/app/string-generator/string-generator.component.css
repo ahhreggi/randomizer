@@ -1,0 +1,44 @@
+.random-string {
+    height: 120px;
+    border: 1px solid white;
+    padding-top: 12px;
+    transition: color 200ms;
+}
+
+.random-unvisited {
+    color: grey;
+    padding-top: 12px;
+}
+.random-unvisited:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.random-visited:active {
+    color: rgb(0, 195, 255);
+}
+
+.random-visited:hover {
+    color: rgb(0, 195, 255);
+    cursor: pointer;
+}
+
+.random-visited:active {
+    color: white;
+}
+
+.random-pw-low {
+    color: rgb(255, 64, 64);
+}
+
+.random-pw-med {
+    color: rgb(255, 187, 0)
+}
+
+.random-pw-default {
+    color: white;
+}
+
+.random-pw-high {
+    color: rgb(41, 226, 41);
+}
