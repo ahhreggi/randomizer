@@ -6,6 +6,7 @@ import { ListsComponent } from './lists/lists.component';
 import { NumbersComponent } from './numbers/numbers.component';
 import { GamesComponent } from './games/games.component';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
+import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'numbers', component: NumbersComponent },
   { path: 'games', component: GamesComponent },
   { path: 'lists/string-generator', component: StringGeneratorComponent },
+  { path: 'lists/list-randomizer', component: ListRandomizerComponent },
 ]
 
 

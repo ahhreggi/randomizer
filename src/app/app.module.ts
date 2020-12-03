@@ -11,6 +11,7 @@ import { GamesComponent } from './games/games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
+import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { StringGeneratorComponent } from './string-generator/string-generator.co
     ListsComponent,
     NumbersComponent,
     GamesComponent,
-    StringGeneratorComponent
+    StringGeneratorComponent,
+    ListRandomizerComponent
   ],
   bootstrap: [AppComponent]
 })

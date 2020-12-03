@@ -109,12 +109,12 @@ export class StringGeneratorComponent implements OnInit {
     this.generateString();
   }
 
-  toggleNumbers(e) {
+  toggleNumbers() {
     this.enableNumbers = !this.enableNumbers;
     this.generateString();
   }
 
-  toggleSpecial(e) {
+  toggleSpecial() {
     this.enableSpecial = !this.enableSpecial;
     this.generateString();
   }

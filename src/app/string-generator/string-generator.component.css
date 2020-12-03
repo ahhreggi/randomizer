@@ -6,7 +6,7 @@
 }
 
 .random-unvisited {
-    color: grey;
+    color: rgb(177, 177, 177);
     padding-top: 12px;
 }
 .random-unvisited:hover {
@@ -14,17 +14,13 @@
     cursor: pointer;
 }
 
-.random-visited:active {
+.random-visited, .random-visited:active {
     color: rgb(0, 195, 255);
 }
 
 .random-visited:hover {
     color: rgb(0, 195, 255);
     cursor: pointer;
-}
-
-.random-visited:active {
-    color: white;
 }
 
 .random-pw-low {

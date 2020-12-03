@@ -3,8 +3,8 @@
 <hr class="hr-random mb-4">
 
 <div>
-    <button type="button" class="btn btn-dark btn-lg btn-random-half" routerLink="/lists/string-generator"
-        (click)="generateString()">generate password</button>
+    <button type="button" class="btn btn-dark btn-lg btn-random-half" (click)="generateString()">
+        generate password</button>
     <p
         [ngClass]="{'random-pw-low': level === 1, 'random-pw-med': level === 2, 'random-pw-default': level === 3, 'random-pw-high': level === 4}">
         (with
@@ -15,38 +15,23 @@
 <div class="random-string m-4" *ngIf="generatedString" (click)="copyString()"
     [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
     <p class="h1 mt-4 font-weight-light">{{generatedString}}</p>
-    <p class="text-muted" *ngIf="!copied">click to copy</p>
-    <p class="text-muted" *ngIf="copied">copied to clipboard!</p>
+    <p class="text-muted">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
 </div>
 
-<div *ngIf="generatedString && !enableNumbers">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleNumbers($event)">
-        add numbers
+<div class="d-flex flex-column align-items-center">
+    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleNumbers()">
+        {{!enableNumbers ? 'add numbers' : 'remove numbers'}}
     </button>
-</div>
-<div *ngIf="generatedString && enableNumbers">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleNumbers($event)">
-        remove numbers
+
+    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleSpecial()">
+        {{!enableSpecial ? 'add special chars' : 'remove special chars'}}
     </button>
-</div>
-<div *ngIf="generatedString && !enableSpecial">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleSpecial($event)">
-        add special chars
-    </button>
-</div>
-<div *ngIf="generatedString && enableSpecial">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="toggleSpecial($event)">
-        remove special chars
-    </button>
-</div>
-<div *ngIf="generatedString">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="makeShorter($event)"
+    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="makeShorter()"
         [disabled]="length <= 4">
         make it shorter
     </button>
-</div>
-<div *ngIf="generatedString">
-    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="makeLonger($event)"
+
+    <button type="button" class="btn btn-dark btn-lg btn-random-half my-1" (click)="makeLonger()"
         [disabled]="length >= 20">
         make it longer
     </button>
