@@ -96,14 +96,14 @@ export class StringGeneratorComponent implements OnInit {
   }
 
   makeShorter(): void {
-    if (this.length > 4) {
+    if (this.length > 6) {
       this.length -= 1
     }
     this.generateString();
   }
 
   makeLonger(): void {
-    if (this.length < 20) {
+    if (this.length < 24) {
       this.length += 1
     }
     this.generateString();

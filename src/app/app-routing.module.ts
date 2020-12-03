@@ -7,15 +7,17 @@ import { NumbersComponent } from './numbers/numbers.component';
 import { GamesComponent } from './games/games.component';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
 import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
+import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'lists', component: ListsComponent },
+  { path: 'lists-and-strings', component: ListsComponent },
   { path: 'numbers', component: NumbersComponent },
   { path: 'games', component: GamesComponent },
-  { path: 'lists/string-generator', component: StringGeneratorComponent },
-  { path: 'lists/list-randomizer', component: ListRandomizerComponent },
+  { path: 'lists-and-strings/password-generator', component: StringGeneratorComponent },
+  { path: 'lists-and-strings/list-randomizer', component: ListRandomizerComponent },
+  { path: 'lists-and-strings/bob-ross-ipsum', component: BobRossIpsumComponent },
 ]
 
 

@@ -1,0 +1,8 @@
+.random-bob {
+    min-height: 150px;
+    min-width: 450px;
+    border: 1px solid white;
+    background-color: rgb(12, 12, 12);
+    padding: 12px 12px 0px 12px;
+    transition: color 200ms;
+}

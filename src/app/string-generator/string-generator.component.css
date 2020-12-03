@@ -1,26 +1,10 @@
 .random-string {
     height: 120px;
+    width: 450px;
     border: 1px solid white;
+    background-color: rgb(12, 12, 12);
     padding-top: 12px;
     transition: color 200ms;
-}
-
-.random-unvisited {
-    color: rgb(177, 177, 177);
-    padding-top: 12px;
-}
-.random-unvisited:hover {
-    color: white;
-    cursor: pointer;
-}
-
-.random-visited, .random-visited:active {
-    color: rgb(0, 195, 255);
-}
-
-.random-visited:hover {
-    color: rgb(0, 195, 255);
-    cursor: pointer;
 }
 
 .random-pw-low {

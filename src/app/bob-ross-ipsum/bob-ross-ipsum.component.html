@@ -1,0 +1,18 @@
+<p class="h3 font-weight-light">bob ross ipsum</p>
+
+<hr class="hr-random mb-4">
+
+<div class="d-flex flex-row justify-content-center">
+    <button type="button" class="btn btn-dark btn-random-third mx-2 mb-4" (click)="getMoreIpsum()">
+        {{counter === 1 ? "let's get crazy" : "let's get crazier"}}</button>
+    <button type="button" class="btn btn-dark btn-random-third mx-2 mb-4" (click)="resetIpsum()">
+        reset canvas</button>
+</div>
+
+<div class="d-flex flex-column align-items-center">
+    <div class="random-bob d-flex flex-column justify-content-center" (click)="copyString()"
+        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
+        <p class="h5">{{ipsum}}</p>
+        <p class="justify-content-end text-muted">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
+    </div>
+</div>

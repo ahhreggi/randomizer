@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 /* Font Family */
 html, body {
     height: 100%;
     font-family: 'Rajdhani', sans-serif;
     color: rgb(240, 240, 240);
     background-color: rgb(15, 15, 15);
+}
+
+.text-code {
+    font-family: 'Roboto Mono', monospace;
 }
 
 .test {
@@ -35,4 +40,25 @@ html, body {
 .toggle-random {
     border: 1px solid white;
     border-radius: 10px;
+}
+
+.random-unvisited {
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+}
+.random-unvisited:hover {
+    color: white;
+}
+
+.random-unvisited:active {
+    color: rgb(177, 177, 177);
+}
+
+.random-visited {
+    color: white;
+    cursor: pointer;
+}
+
+.random-visited:active {
+    color: rgb(177, 177, 177);
 }

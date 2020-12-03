@@ -1,8 +1,23 @@
 <p class="h3 font-weight-light">list randomizer</p>
 
 <hr class="hr-random mb-4">
+<div class="d-flex flex-column align-items-center">
 
-<div>
-    <button type="button" class="btn btn-dark btn-lg btn-random-half">randomize!</button>
-    <p>(press this)</p>
+    <!-- TEXT AREA -->
+    <textarea #textInput class="text-code mb-3" [(ngModel)]="currentInput" rows="10"
+        placeholder="enter one item per line"></textarea>
+
+    <!-- CONTROLS -->
+
+    <button type="button" class="btn btn-dark btn-random-half mb-1" (click)="sortList(currentInput)">sort</button>
+    <button type="button" class="btn btn-dark btn-random-half my-1"
+        (click)="randomizeList(currentInput)">randomize</button>
+    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="removeDupes(currentInput)">remove
+        duplicates</button>
+    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="clearList()">clear</button>
+
 </div>
+
+
+<!-- <p>randomized: {{randomizedItems}}</p>
+<p>current input: {{currentInput}}</p> -->

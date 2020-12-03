@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
 import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
+import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { ListRandomizerComponent } from './list-randomizer/list-randomizer.compo
     NumbersComponent,
     GamesComponent,
     StringGeneratorComponent,
-    ListRandomizerComponent
+    ListRandomizerComponent,
+    BobRossIpsumComponent
   ],
   bootstrap: [AppComponent]
 })
