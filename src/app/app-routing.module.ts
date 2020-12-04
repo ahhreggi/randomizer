@@ -8,6 +8,7 @@ import { GamesComponent } from './games/games.component';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
 import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
 import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
+import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'lists-and-strings/password-generator', component: StringGeneratorComponent },
   { path: 'lists-and-strings/list-randomizer', component: ListRandomizerComponent },
   { path: 'lists-and-strings/bob-ross-ipsum', component: BobRossIpsumComponent },
+  { path: 'lists-and-strings/dad-jokes', component: DadJokesComponent },
 ]
 
 

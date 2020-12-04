@@ -10,9 +10,10 @@
 </div>
 
 <div class="d-flex flex-column align-items-center">
-    <div class="random-bob d-flex flex-column justify-content-center" (click)="copyString()"
+    <div class="random-output-box d-flex flex-column justify-content-center" (click)="copyString()"
         [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
-        <p class="h5">{{ipsum}}</p>
-        <p class="justify-content-end text-muted">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
+        <p class="h5 disable-select">{{ipsum}}</p>
+        <p class="justify-content-end text-muted disable-select">{{copied ? 'copied to clipboard!' : 'click to copy'}}
+        </p>
     </div>
 </div>

@@ -14,9 +14,9 @@
 
 <div class="d-flex justify-content-center">
     <div class="random-string mb-4" *ngIf="generatedString" (click)="copyString()"
-        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
-        <p class="h3 mt-4 font-weight-light text-code">{{generatedString}}</p>
-        <p class="text-muted">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
+        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied, 'random-pw-box-low': level === 1, 'random-pw-box-med': level === 2, 'random-pw-box-default': level === 3, 'random-pw-box-high': level === 4}">
+        <p class="h3 mt-4 font-weight-light text-code disable-select">{{generatedString}}</p>
+        <p class="text-muted disable-select">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
     </div>
 </div>
 
@@ -24,14 +24,12 @@
     <button type="button" class="btn btn-dark btn-random-half my-1" (click)="toggleNumbers()">
         {{!enableNumbers ? 'add numbers' : 'remove numbers'}}
     </button>
-
     <button type="button" class="btn btn-dark btn-random-half my-1" (click)="toggleSpecial()">
         {{!enableSpecial ? 'add special chars' : 'remove special chars'}}
     </button>
     <button type="button" class="btn btn-dark btn-random-half my-1" (click)="makeShorter()" [disabled]="length <= 6">
         make it shorter
     </button>
-
     <button type="button" class="btn btn-dark btn-random-half my-1" (click)="makeLonger()" [disabled]="length >= 24">
         make it longer
     </button>

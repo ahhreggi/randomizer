@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,10 +14,12 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
 import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
 import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
+import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -30,7 +33,8 @@ import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component
     GamesComponent,
     StringGeneratorComponent,
     ListRandomizerComponent,
-    BobRossIpsumComponent
+    BobRossIpsumComponent,
+    DadJokesComponent
   ],
   bootstrap: [AppComponent]
 })
