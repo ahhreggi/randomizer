@@ -15,6 +15,7 @@ import { StringGeneratorComponent } from './string-generator/string-generator.co
 import { ListRandomizerComponent } from './list-randomizer/list-randomizer.component';
 import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
+import { TelephoneNumberComponent } from './telephone-number/telephone-number.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
     StringGeneratorComponent,
     ListRandomizerComponent,
     BobRossIpsumComponent,
-    DadJokesComponent
+    DadJokesComponent,
+    TelephoneNumberComponent
   ],
   bootstrap: [AppComponent]
 })

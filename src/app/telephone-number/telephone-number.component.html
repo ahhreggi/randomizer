@@ -1,0 +1,24 @@
+<p class="h3 font-weight-light">telephone number</p>
+
+<hr class="hr-random mb-4">
+
+<div class="d-flex flex-row justify-content-center">
+    <button type="button" class="btn btn-dark btn-random-half mx-2 mb-4" (click)="nextNumber()">
+        generate number</button>
+</div>
+
+<div class="d-flex flex-column align-items-center">
+    <div class="random-output-box d-flex flex-column justify-content-center" (click)="copyString()"
+        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
+        <p class="h1 disable-select">{{number}}</p>
+        <p class="justify-content-end text-muted disable-select">{{copied ? 'copied to clipboard!' : 'click to copy'}}
+        </p>
+    </div>
+    <div class="d-flex flex-column mt-3">
+        <div *ngFor=" let num of numbers; let i=index;" class="disable-select"
+            [ngClass]="{'h4': i === 0, 'h5': i === 1, 'h6': i === 2}">
+            {{num}}
+        </div>
+    </div>
+
+</div>
