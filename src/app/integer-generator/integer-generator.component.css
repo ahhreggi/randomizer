@@ -1,0 +1,18 @@
+.random-error-msg {
+    color: rgb(255, 64, 64);
+}
+
+.random-textbox {
+    width: 50%;
+}
+
+.form-control {
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+.input-group-text {
+    font-weight: 600;
+    background-color: rgb(212, 212, 212);
+    color: rgb(100, 100, 100);
+}

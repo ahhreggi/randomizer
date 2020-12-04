@@ -13,9 +13,10 @@
 
 
 <div class="d-flex justify-content-center">
-    <div class="random-string mb-4" *ngIf="generatedString" (click)="copyString()"
+    <div class="random-output-box mb-4" *ngIf="generatedString" (click)="copyString()"
         [ngClass]="{'random-unvisited': !copied, 'random-visited': copied, 'random-pw-box-low': level === 1, 'random-pw-box-med': level === 2, 'random-pw-box-default': level === 3, 'random-pw-box-high': level === 4}">
-        <p class="h3 mt-4 font-weight-light text-code disable-select">{{generatedString}}</p>
+        <p class="h3 pt-3 mt-4 font-weight-light text-code disable-select">
+            {{generatedString}}</p>
         <p class="text-muted disable-select">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
     </div>
 </div>

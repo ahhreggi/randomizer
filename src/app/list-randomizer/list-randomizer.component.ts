@@ -42,13 +42,6 @@ export class ListRandomizerComponent implements OnInit {
         [items[i], items[j]] = [items[j], items[i]];
       }
       this.listOutput = items;
-
-      // TEMP
-      for (let i = 0; i < this.listOutput.length; i++) {
-        this.listOutput[i] = "\"" + this.listOutput[i] + "\", ";
-      }
-      ///////
-
       this.currentInput = this.listOutput.join('\n');
     } else {
       this.listOutput = [];

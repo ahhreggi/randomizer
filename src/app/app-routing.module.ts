@@ -10,6 +10,7 @@ import { ListRandomizerComponent } from './list-randomizer/list-randomizer.compo
 import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { TelephoneNumberComponent } from './telephone-number/telephone-number.component';
+import { IntegerGeneratorComponent } from './integer-generator/integer-generator.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'lists-and-strings/bob-ross-ipsum', component: BobRossIpsumComponent },
   { path: 'lists-and-strings/dad-jokes', component: DadJokesComponent },
   { path: 'numbers/telephone-number', component: TelephoneNumberComponent },
+  { path: 'numbers/integer-generator', component: IntegerGeneratorComponent },
 ]
 
 
