@@ -11,6 +11,7 @@ import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { TelephoneNumberComponent } from './telephone-number/telephone-number.component';
 import { IntegerGeneratorComponent } from './integer-generator/integer-generator.component';
+import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'lists-and-strings/dad-jokes', component: DadJokesComponent },
   { path: 'numbers/telephone-number', component: TelephoneNumberComponent },
   { path: 'numbers/integer-generator', component: IntegerGeneratorComponent },
+  { path: 'games/dice-roller', component: DiceRollerComponent }
 ]
 
 

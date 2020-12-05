@@ -1,0 +1,51 @@
+<p class="h3 font-weight-light">dice roller</p>
+
+<hr class="hr-random mb-4">
+
+
+<div class="dice-box disable-select {{bgColor}} mb-4">
+
+    <!-- HEADER -->
+    <div class="dice-sum display-4 disable-select">
+        <div class="dice-header" *ngIf="count">how many dice?</div>
+        <div [@animateSum]="rolling ? 'rolling' : 'rolled'">
+            <div *ngIf="!rolling">{{sum}}</div>
+        </div>
+    </div>
+
+    <!-- DICE TABLE -->
+    <!-- <div [@animateRoll]="rolling ? 'rolling' : 'rolled'"> -->
+    <div class="dice-table d-flex justify-content-center align-items-center">
+        <div [@animateRoll]="rolling ? 'rolling' : 'rolled'">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
+                <div *ngFor="let value of diceValues">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="{{dice[value]}}" alt="dice" class="dice">
+                        <span>{{value}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-center">
+            <div *ngIf="count" class="d-flex justify-content-center">
+                <div class="d-flex justify-content-end">
+                    <img src="assets/images/dice/remove.png" alt="remove" (click)="removeDie()" class="dice-btn">
+                </div>
+                <div class="d-flex justify-content-center dice-count">
+                    <div class="display-1" *ngIf="count">{{amount}}</div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <img src="assets/images/dice/add.png" alt="add" (click)="addDie()" class="dice-btn">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="d-flex flex-row justify-content-center">
+        <img *ngIf="!count" src="assets/images/dice/remove.png" alt="remove" (click)="removeDie()" class="dice-btn">
+        <button class="align-self-center dice-btn dice-btn-roll w-25" (click)="showDice(); roll()">ROLL</button>
+        <img *ngIf="!count" src="assets/images/dice/add.png" alt="add" (click)="addDie()" class="dice-btn">
+    </div>
+</div>

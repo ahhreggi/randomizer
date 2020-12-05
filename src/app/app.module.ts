@@ -17,6 +17,7 @@ import { BobRossIpsumComponent } from './bob-ross-ipsum/bob-ross-ipsum.component
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { TelephoneNumberComponent } from './telephone-number/telephone-number.component';
 import { IntegerGeneratorComponent } from './integer-generator/integer-generator.component';
+import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { IntegerGeneratorComponent } from './integer-generator/integer-generator
     BobRossIpsumComponent,
     DadJokesComponent,
     TelephoneNumberComponent,
-    IntegerGeneratorComponent
+    IntegerGeneratorComponent,
+    DiceRollerComponent
   ],
   bootstrap: [AppComponent]
 })
