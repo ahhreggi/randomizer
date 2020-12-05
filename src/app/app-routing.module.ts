@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ListsComponent } from './lists/lists.component';
+import { StringsComponent } from './strings/strings.component';
 import { NumbersComponent } from './numbers/numbers.component';
 import { GamesComponent } from './games/games.component';
 import { StringGeneratorComponent } from './string-generator/string-generator.component';
@@ -16,13 +16,13 @@ import { DiceRollerComponent } from './dice-roller/dice-roller.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'lists-and-strings', component: ListsComponent },
+  { path: 'strings', component: StringsComponent },
   { path: 'numbers', component: NumbersComponent },
   { path: 'games', component: GamesComponent },
-  { path: 'lists-and-strings/password-generator', component: StringGeneratorComponent },
-  { path: 'lists-and-strings/list-randomizer', component: ListRandomizerComponent },
-  { path: 'lists-and-strings/bob-ross-ipsum', component: BobRossIpsumComponent },
-  { path: 'lists-and-strings/dad-jokes', component: DadJokesComponent },
+  { path: 'strings/password-generator', component: StringGeneratorComponent },
+  { path: 'strings/list-randomizer', component: ListRandomizerComponent },
+  { path: 'strings/bob-ross-ipsum', component: BobRossIpsumComponent },
+  { path: 'strings/dad-jokes', component: DadJokesComponent },
   { path: 'numbers/telephone-number', component: TelephoneNumberComponent },
   { path: 'numbers/integer-generator', component: IntegerGeneratorComponent },
   { path: 'games/dice-roller', component: DiceRollerComponent }

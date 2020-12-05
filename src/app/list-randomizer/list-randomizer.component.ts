@@ -22,8 +22,11 @@ export class ListRandomizerComponent implements OnInit {
   }
 
   removeDupes(inputText: string): void {
-    this.listOutput = [...new Set(this.listOutput)];
-    this.currentInput = this.listOutput.join('\n');
+    if (inputText) {
+      this.listOutput = inputText.trim().split('\n').filter(Boolean);
+      this.listOutput = [...new Set(this.listOutput)];
+      this.currentInput = this.listOutput.join('\n');
+    }
   }
 
   sortList(inputText: string): void {

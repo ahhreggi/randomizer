@@ -1,6 +1,6 @@
 .dice {
-    max-width: 90px;
-    margin: 0px 15px;
+    width: 80px;
+    margin: 0px 10px;
     opacity: 0.8;
 }
 
@@ -18,11 +18,10 @@
 }
 
 .dice-box {
-    height: 470px;
+    height: 400px;
     width: 100%;
     border: 1px solid white;
     transition: color 200ms;
-    padding-bottom: 15px;
 }
 /*
 .dice-box:hover {
@@ -61,11 +60,13 @@
 
 
 .dice-btn-roll {
+    margin: 25px 0px 0px 0px;
     padding: 0px;
+    min-width: 120px;
 }
 
 .dice-table {
-    height: 200px;
+    height: 160px;
     margin-top: 50px;
 }
 .dice-bg-pink {

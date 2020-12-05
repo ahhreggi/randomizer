@@ -2,18 +2,18 @@
 
 <hr class="hr-random mb-4">
 
-<div class="random-output-box d-flex flex-column justify-content-center mb-4" (click)="copyString()"
+<div class="d-flex flex-row justify-content-center mb-4">
+    <button type="button" class="btn btn-dark btn-random-full" (click)="getJoke()">
+        get a new joke</button>
+</div>
+
+<div class="random-output-box d-flex flex-column justify-content-center mb-4 joke-box" (click)="copyString()"
     [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
     <div [@visibilityChanged]="!dadJoke ? 'in' : 'out'">
-        <p class="h5 disable-select">{{dadJoke}}</p>
+        <p class="disable-select"><span [ngClass]="{'h4': shortJoke, 'h5': !shortJoke}">{{dadJoke}}</span></p>
         <p class="justify-content-end text-muted disable-select" *ngIf="dadJoke">
             {{copied ? 'copied to clipboard!' : 'click to copy'}}
         </p>
     </div>
 
-</div>
-
-<div class="d-flex flex-row justify-content-center">
-    <button type="button" class="btn btn-dark btn-random-third mx-2" (click)="getJoke()">
-        get a new joke</button>
 </div>

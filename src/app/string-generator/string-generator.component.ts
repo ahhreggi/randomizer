@@ -18,6 +18,7 @@ export class StringGeneratorComponent implements OnInit {
   enableSpecial = true;
   copied = false;
   level = 2;
+  fontSize: string;
 
   constructor(private clipboard: Clipboard) { }
 
@@ -44,13 +45,21 @@ export class StringGeneratorComponent implements OnInit {
     for (let i = 0; i < this.length; i++) {
       str += chars.charAt(Math.floor(Math.random() * charsLength));
     }
+    // Set display font size
+    if (this.length > 20) {
+      this.fontSize = "h5";
+    } else if (this.length > 16) {
+      this.fontSize = "h4";
+    } else {
+      this.fontSize = "h3";
+    }
     const valid = this.checkReq(str);
     if (!valid) {
       this.generateString();
     } else {
       this.generatedString = str;
       this.copied = false;
-      this.evalSecurity(str);
+      this.evalSecurity();
     }
   }
 
@@ -119,7 +128,7 @@ export class StringGeneratorComponent implements OnInit {
     this.generateString();
   }
 
-  evalSecurity(pass: string): void {
+  evalSecurity(): void {
     let rating = 0;
     rating += this.length;
     rating += this.enableNumbers ? 1 : 0;

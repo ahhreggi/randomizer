@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ListsComponent } from './lists/lists.component';
+import { StringsComponent } from './strings/strings.component';
 import { NumbersComponent } from './numbers/numbers.component';
 import { GamesComponent } from './games/games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +31,7 @@ import { DiceRollerComponent } from './dice-roller/dice-roller.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    ListsComponent,
+    StringsComponent,
     NumbersComponent,
     GamesComponent,
     StringGeneratorComponent,

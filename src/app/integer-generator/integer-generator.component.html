@@ -2,35 +2,33 @@
 
 <hr class="hr-random mb-4">
 
-<div class="container">
-    <div class="row d-flex flex-column align-items-center">
-        <div class="col-6">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text disable-select">min</span>
-                </div>
-                <input [(ngModel)]="minVal" type="text" class="form-control" aria-label="minimum"
-                    [ngClass]="{'is-invalid': minError || rangeError || (!minVal && clicked) }"
-                    (change)="checkMin(); checkRange();" placeholder="enter the minimum value" maxlength=14>
-            </div>
+
+<div class="d-flex flex-row flex-wrap justify-content-center align-items-between">
+
+    <div class="input-group int-input mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text disable-select">min</span>
         </div>
-        <div class="col-6">
-            <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                    <span class="input-group-text disable-select">max</span>
-                </div>
-                <input [(ngModel)]="maxVal" type="text" class="form-control" aria-label="maximum"
-                    [ngClass]="{'is-invalid': maxError || rangeError || (!maxVal && clicked) }"
-                    (change)="checkMax(); checkRange();" placeholder="enter the maximum value" maxlength=14>
-            </div>
+        <input [(ngModel)]="minVal" type="text" class="form-control" aria-label="minimum"
+            [ngClass]="{'is-invalid': minError || rangeError || (!minVal && clicked) }"
+            (change)="checkMin(); checkRange();" placeholder="enter the minimum value" maxlength=14>
+    </div>
+
+    <div class="input-group int-input mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text disable-select">max</span>
         </div>
+        <input [(ngModel)]="maxVal" type="text" class="form-control" aria-label="maximum"
+            [ngClass]="{'is-invalid': maxError || rangeError || (!maxVal && clicked) }"
+            (change)="checkMax(); checkRange();" placeholder="enter the maximum value" maxlength=14>
     </div>
 </div>
 
-<div class="d-flex flex-column align-items-center">
+
+<div class="d-flex flex-column align-items-center mt-3">
     <div class="random-output-box d-flex flex-column justify-content-center" (click)="copyString()"
-        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied}">
-        <p *ngIf="valid" class="h1 disable-select text-code">
+        [ngClass]="{'random-unvisited': !copied, 'random-visited': copied, 'no-hover': !valid}">
+        <p *ngIf="valid" class="h3 disable-select text-code">
             {{randInt}}
         </p>
         <p *ngIf="valid" class="justify-content-end text-muted disable-select">

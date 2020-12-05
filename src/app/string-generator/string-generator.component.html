@@ -3,35 +3,36 @@
 <hr class="hr-random mb-4">
 
 
-<button type="button" class="btn btn-dark btn-random-half" (click)="generateString()">
+<button type="button" class="btn btn-dark btn-random-full" (click)="generateString()">
     generate password</button>
 <p
     [ngClass]="{'random-pw-low': level === 1, 'random-pw-med': level === 2, 'random-pw-default': level === 3, 'random-pw-high': level === 4}">
     (with
-    {{length}} upper & lowercase
+    {{length}}
     letters{{enableNumbers ? ', numbers' : ''}}{{enableSpecial ? ', special chars' : ''}})</p>
 
 
-<div class="d-flex justify-content-center">
-    <div class="random-output-box mb-4" *ngIf="generatedString" (click)="copyString()"
+<div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="random-output-box mb-4 random-pw-box" *ngIf="generatedString" (click)="copyString()"
         [ngClass]="{'random-unvisited': !copied, 'random-visited': copied, 'random-pw-box-low': level === 1, 'random-pw-box-med': level === 2, 'random-pw-box-default': level === 3, 'random-pw-box-high': level === 4}">
-        <p class="h3 pt-3 mt-4 font-weight-light text-code disable-select">
+        <p class="{{fontSize}} pt-2 font-weight-light text-code disable-select">
             {{generatedString}}</p>
         <p class="text-muted disable-select">{{copied ? 'copied to clipboard!' : 'click to copy'}}</p>
     </div>
 </div>
 
-<div class="d-flex flex-column align-items-center">
-    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="toggleNumbers()">
+<div class="d-flex flex-row flex-wrap justify-content-between">
+    <button type="button" class="btn btn-dark btn-random-half" (click)="toggleNumbers()">
         {{!enableNumbers ? 'add numbers' : 'remove numbers'}}
     </button>
-    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="toggleSpecial()">
+    <button type="button" class="btn btn-dark btn-random-half" (click)="toggleSpecial()">
         {{!enableSpecial ? 'add special chars' : 'remove special chars'}}
     </button>
-    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="makeShorter()" [disabled]="length <= 6">
+    <button type="button" class="btn btn-dark btn-random-half my-2" (click)="makeShorter()" [disabled]="length <= 6">
         make it shorter
     </button>
-    <button type="button" class="btn btn-dark btn-random-half my-1" (click)="makeLonger()" [disabled]="length >= 24">
+    <button type="button" class="btn btn-dark btn-random-half my-2" (click)="makeLonger()" [disabled]="length >= 24">
         make it longer
     </button>
+
 </div>

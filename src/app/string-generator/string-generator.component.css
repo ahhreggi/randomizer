@@ -6,6 +6,11 @@
     transition: color 200ms;
 }
 
+.random-pw-box {
+    padding-top: 30px;
+    height: 130px;
+}
+
 .random-pw-low {
     color: rgb(255, 64, 64);
 }

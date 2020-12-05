@@ -24,6 +24,7 @@ export class DadJokesComponent implements OnInit {
   dadJoke = "";
   copied = false;
   hold = false;
+  shortJoke: boolean;
 
   constructor(private dadJokeService: DadJokeService, private clipboard: Clipboard) {
 
@@ -41,12 +42,17 @@ export class DadJokesComponent implements OnInit {
         this.dadJokeService.getJoke()
           .subscribe(fetchedJoke => {
             this.dadJoke = fetchedJoke['joke'];
+            if (this.dadJoke.length > 80) {
+              this.shortJoke = false;
+            } else {
+              this.shortJoke = true;
+            }
           });
         this.copied = false;
       }, 500);
       setTimeout(() => {
         this.hold = false;
-      }, 1500);
+      }, 500);
     }
   }
 

@@ -9,6 +9,20 @@ html, body {
     background-color: rgb(17, 17, 17);
 }
 
+.random-title {
+    font-size: 36pt;
+}
+
+.random-list-textarea {
+    color: white;
+    background-color: rgb(12, 12, 12);
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+}
+
 .text-code {
     font-family: 'Roboto Mono', monospace;
 }
@@ -18,11 +32,11 @@ html, body {
 }
 
 .btn-random-full {
-    width: 100%;
+    width: 250px;
 }
 
 .btn-random-half {
-    width: 50%;
+    width: 49%;
 }
 
 .btn-random-third {
@@ -64,7 +78,7 @@ html, body {
 }
 
 .random-output-box {
-    min-height: 160px;
+    min-height: 100px;
     width: 100%;
     border: 1px solid white;
     background-color: rgb(12, 12, 12);
