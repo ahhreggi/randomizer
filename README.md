@@ -25,7 +25,7 @@
 <!-- DEMO LINK -->
 <div align="center">
   <b><a href="http://randomizer.ca">
-    View Site Live »
+    » View Live Demo «
   </a></b>
 </div>
 
